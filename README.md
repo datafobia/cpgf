@@ -18,3 +18,6 @@ library(cpgf)
 
 # Acesse o dataset
 data(cpgf_data)
+
+# Veja os dados
+View(cpgf_data)
