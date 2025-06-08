@@ -4,6 +4,12 @@
 #'
 #' @param month Valid options are 01 a 12.
 #'
+#' @import data.table
+#'
+#' @export
+#'
+#' @examples \dontrun{cartao <- get_cpgf(2023, 12)}
+#'
 #' @return \code{(get_cpgf)} returns a \code{data.frame}
 
 get_cpgf <- function(year, month){
