@@ -62,7 +62,13 @@ usethis::use_data(cpgf_data, overwrite = TRUE)
 devtools::document()
 
 # 8. Instalar e testar
+unlink("C:/Users/dalso/AppData/Local/R/win-library/4.4/00LOCK-cpgf", recursive = TRUE)
 devtools::install()
+
 library(cpgf)
 data(cpgf_data)
 str(cpgf_data)  # Melhor que View() para scripts
+
+# Github
+
+usethis::use_git()
