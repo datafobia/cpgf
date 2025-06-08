@@ -1,13 +1,18 @@
 Package: cpgf
-Title: Consolida as informações do Cartão de Pagamento do Governo Federal (CPGF)
+Title: Consolidates information from the Federal Government Payment Card (CPGF)
 Version: 0.0.0.9000
-Authors@R: 
-    person("Dalson", "Figueiredo", , "dalson.figueiredo@ufpe.br", role = c("aut", "cre"))
-Description: Consolida as informações do Cartão de Pagamento do Governo Federal (CPGF) em uma base de dados
+Authors@R: c( 
+    person("Dalson", "Figueiredo", , "dalson.figueiredo@ufpe.br", role = c("aut", "cre")),
+    person("Denisson", "Silva", , "denissoncsol@gmail.com", role = "aut")
+    )
+Description: Consolidates Federal Government Payment Card (CPGF) information into a database
 License: MIT
 Encoding: UTF-8
+BugReports: https://github.com/datafobia/cpgf/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 3.5)
+    data.table
+    stringr
 LazyData: true
