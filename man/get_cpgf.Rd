@@ -2,20 +2,20 @@
 % Please edit documentation in R/get_cpgf.R
 \name{get_cpgf}
 \alias{get_cpgf}
-\title{Download da CPGF}
+\title{Download the database the Federal Government Payment Card CPGF - Brazil}
 \usage{
 get_cpgf(year, month)
 }
 \arguments{
-\item{month}{Valid options are 01 a 12.}
+\item{year}{Valid options are 2013 to corrent.}
 
-\item{year.}{Valid options are 2013 to corrent.}
+\item{month}{Valid options are 01 to 12.}
 }
 \value{
 \code{(get_cpgf)} returns a \code{data.frame}
 }
 \description{
-Download da CPGF
+Download the database the Federal Government Payment Card CPGF - Brazil
 }
 \examples{
 \dontrun{cartao <- get_cpgf(2023, 12)}

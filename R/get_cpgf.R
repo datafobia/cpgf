@@ -1,10 +1,9 @@
-#' Download da CPGF
+#' Download the database the Federal Government Payment Card CPGF - Brazil
 #'
-#' @param year. Valid options are 2013 to corrent.
+#' @param year Valid options are 2013 to corrent.
 #'
-#' @param month Valid options are 01 a 12.
+#' @param month Valid options are 01 to 12.
 #'
-#' @import data.table
 #'
 #' @export
 #'
