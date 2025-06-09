@@ -14,13 +14,13 @@ devtools::install_github("datafobia/cpgf")
 ## How does it work?
 
 ```{.r}
-# Carregue o pacote
+# Load the package
 library(cpgf)
 
-# Acesse o dataset
+# Access the dataset
 dateset <- cpgf_data()
 
-# Veja os dados
+# See the data
 View(cpgf_data)
 ```
 
