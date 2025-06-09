@@ -17,7 +17,19 @@ devtools::install_github("datafobia/cpgf")
 library(cpgf)
 
 # Acesse o dataset
-data(cpgf_data)
+dateset <- cpgf_data()
 
 # Veja os dados
 View(cpgf_data)
+```
+
+Mas você pode necessitar da base de dados direito da fonte: https://portaldatransparencia.gov.br/download-de-dados/cpgf,
+que disponibiliza mes a mes, neste caso vc pode usar a função get_cpgf
+
+```r
+# Download
+janeiro24 <- get_cpgf(2024, 1)
+
+# Veja os dados
+View(janeiro24)
+```
