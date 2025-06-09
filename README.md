@@ -2,6 +2,8 @@
 
 The `cpgf` package provides a consolidated database of the Federal Government Payment Card (CPGF) covering the period from 2013 to 2025.
 
+The Federal Government Payment Card (CPGF) is a payment instrument used by the government that operates similarly to a regular credit card, but within specific limits and regulations. The government uses the CPGF to cover its own expenses, provided they qualify as advances of funds (suprimento de fundos).
+
 ## 📥 Installation
 
 `cpgf` is also available on [GitHub](https://github.com/). You can install pre-release versions via:
