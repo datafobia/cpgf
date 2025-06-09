@@ -1,8 +1,12 @@
-#' Database the Federal Government Payment Card CPGF - Brazil
+#' Database the Federal Government Payment Card CPGF - Brazil (2013 to 2025)
 #'
-#' The Federal Government Payment Card (CPGF) is a payment instrument used by the government that operates similarly to a regular credit card, but within specific limits and regulations. The government uses the CPGF to cover its own expenses, provided they qualify as advances of funds (suprimento de fundos).
+#' The Federal Government Payment Card (CPGF) is a payment instrument used by the
+#' government that operates similarly to a regular credit card, but within specific
+#' limits and regulations. The government uses the CPGF to cover its own expenses,
+#' provided they qualify as advances of funds (suprimento de fundos).
 #'
-#' @format Um data frame com X linhas e 21 colunas:
+#' @return \code{cpgf_data()} returns a \code{data.frame} with the following variables:
+#'
 #' \describe{
 #'   \item{codigo_orgao_superior}{Code corresponding to the Higher Body of the managing authority on behalf of which the government payment card was formally issued.}
 #'   \item{nome_orgao_superior}{Name of the Higher Body of the managing unit on behalf of which the payment card was issued.}
@@ -25,5 +29,30 @@
 #'   \item{valor_transacao2}{Descrição}
 #'   \item{valor_transacao_deflacionado}{Descrição}
 #' }
-#' @source Fonte dos dados
-# "cpgf_data"
+#'
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' # Download data on the Federal Government Payment Card (CPGF)
+#' cpgf <- cpgf_data()
+#' }
+
+cpgf_data <- function(){
+
+   arquivo <-  osfr::osf_retrieve_file("7xc5j")
+   message("Processing the data...")
+
+    down <- osfr::osf_download(arquivo, conflicts = T)
+
+    temp_env <- new.env()
+    load(down$local_path, envir = temp_env)
+
+    unlink(down$local_path,  recursive = T)
+
+   message("Done.\n")
+   return(temp_env$final)
+
+}
+
