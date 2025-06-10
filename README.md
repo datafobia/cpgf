@@ -44,6 +44,6 @@ To automatically create a variable with the deflated value, simply provide the r
 january2023 <- get_cpgf(2023, 1, "01/2024")
 
 # See the data
-View(january24)
+View(january2023)
 ```
 
