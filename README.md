@@ -1,5 +1,7 @@
 # 📦 cpgf
 
+[![R-CMD-check](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml/badge.svg)]
+
 The `cpgf` package provides a consolidated database of the Federal Government Payment Card (CPGF).
 
 The Federal Government Payment Card (CPGF) is a payment instrument used by the government that operates similarly to a regular credit card, but within specific limits and regulations. The government uses the CPGF to cover its own expenses, provided they qualify as advances of funds (suprimento de fundos).
