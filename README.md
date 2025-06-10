@@ -20,7 +20,7 @@ devtools::install_github("datafobia/cpgf")
 library(cpgf)
 
 # Access the dataset
-dateset <- cpgf_data()
+dataset <- cpgf_data()
 
 # See the data
 View(cpgf_data)
