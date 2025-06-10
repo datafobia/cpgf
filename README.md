@@ -1,23 +1,38 @@
 # 📦 cpgf
 
-O pacote `cpgf` disponibiliza uma base consolidada de dados do Cartão de Pagamento do Governo Federal (CPGF) referente ao período de 2013 a 2025.
+The `cpgf` package provides a consolidated database of the Federal Government Payment Card (CPGF) covering the period from 2013 up to May 2025.
 
-## 📥 Instalação
+The Federal Government Payment Card (CPGF) is a payment instrument used by the government that operates similarly to a regular credit card, but within specific limits and regulations. The government uses the CPGF to cover its own expenses, provided they qualify as advances of funds (suprimento de fundos).
 
-Para instalar diretamente do GitHub:
+## 📥 Installation
 
-```r
-# Instale o pacote devtools, se ainda não tiver
-install.packages("devtools")
+`cpgf` is also available on [GitHub](https://github.com/). You can install pre-release versions via:
 
-# Instale o pacote cpgf
+``` {.r}
+if (!require("devtools")) install.packages("devtools")
 devtools::install_github("datafobia/cpgf")
+```
 
-# Carregue o pacote
+## How does it work?
+
+```{.r}
+# Load the package
 library(cpgf)
 
-# Acesse o dataset
-data(cpgf_data)
+# Access the dataset
+dateset <- cpgf_data()
 
-# Veja os dados
+# See the data
 View(cpgf_data)
+```
+
+But you may need the database directly from the source: https://portaldatransparencia.gov.br/download-de-dados/cpgf,
+which provides monthly data. In this case, you can use the get_cpgf function.
+
+```{.r}
+# Download
+january24 <- get_cpgf(2024, 1)
+
+# See the data
+View(january24)
+```
