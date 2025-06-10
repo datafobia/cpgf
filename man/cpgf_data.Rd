@@ -2,7 +2,7 @@
 % Please edit documentation in R/cpgf_data.R
 \name{cpgf_data}
 \alias{cpgf_data}
-\title{Database the Federal Government Payment Card CPGF - Brazil (2013  up to May 2025)}
+\title{Database the Federal Government Payment Card CPGF - Brazil (2013  up to April 2025)}
 \usage{
 cpgf_data()
 }
@@ -29,7 +29,7 @@ cpgf_data()
 \item{ano_mes_dia}{Year, month, and day on which the transaction was carried out.}
 \item{ano_mes}{Year and month on which the transaction was carried out.}
 \item{valor_transacao2}{Amount of the transaction carried out with the card, in Brazilian reais (BRL) as numeric.}
-\item{valor_transacao_deflacionado}{Total deflated transaction value to facilitate comparison, in Brasilian reais.}
+\item{valor_transacao_deflacionado}{Total deflated transaction value to facilitate comparison, in Brasilian reais. Deflated by April 2025.}
 }
 }
 \description{

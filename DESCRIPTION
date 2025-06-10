@@ -1,11 +1,16 @@
-Package: cpgf
+Package: cpgfR
 Title: Consolidates information from the Federal Government Payment Card (CPGF)
-Version: 0.0.0.9000
+Version: 0.0.1.0
 Authors@R: c( 
     person("Dalson", "Figueiredo", , "dalson.figueiredo@ufpe.br", role = c("aut", "cre")),
     person("Denisson", "Silva", , "denissoncsol@gmail.com", role = "aut")
     )
-Description: Consolidates Federal Government Payment Card (CPGF) information into a database.
+Description: Provides access to consolidated information from the Brazilian Federal 
+    Government Payment Card ("Cartão de Pagamento do Governo Federal"). 
+    Includes functions to retrieve, clean, and organize data directly from the 
+    official source — the Federal Government Transparency Portal. 
+    Useful for public spending analysis, transparency research, and 
+    reproducible workflows in auditing or investigative journalism.
 License: GPL (>= 2)
 Encoding: UTF-8
 BugReports: https://github.com/datafobia/cpgf/issues
@@ -15,5 +20,7 @@ Depends: R (>= 3.5)
 Imports: 
     data.table,
     stringr,
-    osfr
+    osfr,
+    lubridate,
+    deflateBR
 LazyData: true
