@@ -27,7 +27,7 @@
 #'   \item{ano_mes_dia}{Year, month, and day on which the transaction was carried out.}
 #'   \item{ano_mes}{Year and month on which the transaction was carried out.}
 #'   \item{valor_transacao2}{Amount of the transaction carried out with the card, in Brazilian reais (BRL) as numeric.}
-#'   \item{valor_transacao_deflacionado}{Total deflated transaction value to facilitate comparison, in Brasilian reais. Deflated by April 2025.}
+#'   \item{valor_transacao_deflacionado}{Total deflated transaction value to facilitate comparison, in Brasilian reais. Deflated until April 2025, using the IPCA index.}
 #' }
 #'
 #'
