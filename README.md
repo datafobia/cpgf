@@ -36,3 +36,14 @@ january24 <- get_cpgf(2024, 1)
 # See the data
 View(january24)
 ```
+
+To automatically create a variable with the deflated value, simply provide the reference month and year in the deflate parameter.
+
+```{.r}
+# Download
+january2023 <- get_cpgf(2023, 1, "01/2024")
+
+# See the data
+View(january24)
+```
+
