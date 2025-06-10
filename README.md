@@ -15,6 +15,8 @@ devtools::install_github("datafobia/cpgf")
 
 ## How does it work?
 
+Database the Federal Government Payment Card CPGF - Brazil (2013  up to May 2025)
+ 
 ```{.r}
 # Load the package
 library(cpgf)
