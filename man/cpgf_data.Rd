@@ -2,7 +2,7 @@
 % Please edit documentation in R/cpgf_data.R
 \name{cpgf_data}
 \alias{cpgf_data}
-\title{Database the Federal Government Payment Card CPGF - Brazil (2013 to 2025)}
+\title{Database the Federal Government Payment Card CPGF - Brazil (2013  up to May 2025)}
 \usage{
 cpgf_data()
 }
@@ -24,12 +24,12 @@ cpgf_data()
 \item{nome_favorecido}{Name of the establishment or individual who received the payment.}
 \item{transacao}{Transaction carried out by the cardholder with the affiliated merchant or contracted party, using the Federal Government Payment Card (CPGF).}
 \item{data_transacao}{Date on which the transaction was carried out.}
-\item{valor_transacao}{Amount of the transaction carried out with the card, in Brazilian reais (BRL).}
-\item{data_date}{Descrição}
-\item{ano_mes_dia}{Descrição}
-\item{ano_mes}{Descrição}
-\item{valor_transacao2}{Descrição}
-\item{valor_transacao_deflacionado}{Descrição}
+\item{valor_transacao}{Amount of the transaction carried out with the card, in Brazilian reais (BRL) as character.}
+\item{data_date}{Date on which the transaction was carried out.}
+\item{ano_mes_dia}{Year, month, and day on which the transaction was carried out.}
+\item{ano_mes}{Year and month on which the transaction was carried out.}
+\item{valor_transacao2}{Amount of the transaction carried out with the card, in Brazilian reais (BRL) as numeric.}
+\item{valor_transacao_deflacionado}{Total deflated transaction value to facilitate comparison, in Brasilian reais.}
 }
 }
 \description{

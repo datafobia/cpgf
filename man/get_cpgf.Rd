@@ -4,12 +4,20 @@
 \alias{get_cpgf}
 \title{Download the database the Federal Government Payment Card CPGF - Brazil}
 \usage{
-get_cpgf(year, month)
+get_cpgf(year, month, deflate = NULL, index_deflate = "ipca")
 }
 \arguments{
 \item{year}{Valid options are 2013 to corrent.}
 
 \item{month}{Valid options are 01 to 12.}
+
+\item{deflate}{By default, it is NULL, but when a value is provided in the
+format month/year (mm/yyyy), the corrected value is calculated using the
+selected inflation index and create variable "valor_transacao_deflacionado",
+which is IPCA by default. For more information, see the deflateBR package.}
+
+\item{index_deflate}{If deflate is not NULL, IPCA is used by default.
+For more information, see the deflateBR package.}
 }
 \value{
 \code{(get_cpgf)} returns a \code{data.frame}
