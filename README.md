@@ -1,6 +1,7 @@
 # 📦 cpgf
 
 [![R-CMD-check](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/datafobia/cpgf?branch=master&svg=true)](https://ci.appveyor.com/project/datafobia/cpgf)
 
 The `cpgf` package provides a consolidated database of the Federal Government Payment Card (CPGF).
 
