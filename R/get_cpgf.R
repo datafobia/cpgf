@@ -38,13 +38,27 @@ get_cpgf <- function(year, month, deflate = NULL, index_deflate = "ipca"){
                     "transacao", "data_transacao", "valor_transacao")
 
 
+  dados$data_transacao <- ifelse(nchar(dados$data_transacao) < 1,
+                                NA,
+                                 dados$data_transacao)
+
+  mindate <- min(as.Date(dados$data_transacao, format = "%d/%m/%Y"), na.rm = T)
+
+  dados$data_transacao <- ifelse(is.na(dados$data_transacao),
+                                 paste0(lubridate::day(mindate), "/",
+                                       lubridate::month(mindate), "/",
+                                       lubridate::year(mindate)),
+                                 dados$data_transacao)
+
+
   dados$data_date <- as.Date(dados$data_transacao, format = "%d/%m/%Y")
+
+
 
   dados$dia <- lubridate::day(dados$data_date)
 
-  dados$ano_mes <- lubridate::make_date(dados$ano_extrato, dados$mes_extrato)
-
-  dados$ano_mes_dia <- lubridate::make_date(dados$ano_extrato, dados$mes_extrato, dados$dia)
+  dados$ano_mes <- lubridate::make_date(lubridate::year(dados$data_date),
+                                        lubridate::month(dados$data_date))
 
   dados$valor_transacao2 <- as.numeric(sub(",", ".", dados$valor_transacao,
                                            fixed = TRUE))
