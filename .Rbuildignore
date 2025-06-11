@@ -1,2 +1,6 @@
 ^cpgf\.Rproj$
 ^\.Rproj\.user$
+^\.github$
+^README\.Rmd$
+^appveyor\.yml$
+^\.travis\.yml$

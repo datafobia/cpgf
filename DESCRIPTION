@@ -1,5 +1,5 @@
 Package: cpgfR
-Title: Consolidates information from the Federal Government Payment Card (CPGF)
+Title: Consolidates Information from the Federal Government Payment Card (CPGF)
 Version: 0.0.1.0
 Authors@R: c( 
     person("Dalson", "Figueiredo", , "dalson.figueiredofo@ufpe.br", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6982-2262")),
