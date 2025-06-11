@@ -47,7 +47,7 @@
 
 cpgf_data <- function(){
 
-   arquivo <-  osfr::osf_retrieve_file("umjrg")
+   arquivo <-  osfr::osf_retrieve_file("axkq5")
    message("Processing the data...")
 
     down <- osfr::osf_download(arquivo, conflicts = T)
