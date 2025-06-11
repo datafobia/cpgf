@@ -1,17 +1,17 @@
-# 📦 cpgfR
+R# 📦 cpgfR
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/cpgfR)](https://cran.r-project.org/package=cpgfR)
 [![R-CMD-check](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml)
 [![Build status](https://ci.appveyor.com/api/projects/status/8sk3mwbo05dstbjh?svg=true)](https://ci.appveyor.com/project/silvadenisson/cpgf)
 [![downloads](https://cranlogs.r-pkg.org/badges/grand-total/cpgfR?color=green)](https://r-pkg.org/pkg/cpgfR)
 
-The `cpgf` package provides a consolidated database of the Federal Government Payment Card (CPGF).
+The `cpgfR` package provides a consolidated database of the Federal Government Payment Card (CPGF).
 
 The Federal Government Payment Card (CPGF) is a payment instrument used by the government that operates similarly to a regular credit card, but within specific limits and regulations. The government uses the CPGF to cover its own expenses, provided they qualify as advances of funds (suprimento de fundos).
 
 ## 📥 Installation
 
-`cpgf` is also available on [GitHub](https://github.com/). You can install pre-release versions via:
+`cpgfR` is also available on [GitHub](https://github.com/). You can install pre-release versions via:
 
 ``` {.r}
 if (!require("devtools")) install.packages("devtools")
@@ -20,11 +20,11 @@ devtools::install_github("datafobia/cpgf")
 
 ## How does it work?
 
-Database the Federal Government Payment Card CPGF - Brazil (2013  up to May 2025)
+Database the Federal Government Payment Card CPGF - Brazil (2013  up to April 2025)
  
 ```{.r}
 # Load the package
-library(cpgf)
+library(cpgfR)
 
 # Access the dataset
 dataset <- cpgf_data()
