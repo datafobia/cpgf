@@ -1,4 +1,4 @@
-R# 📦 cpgfR
+# 📦 cpgfR
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/cpgfR)](https://cran.r-project.org/package=cpgfR)
 [![R-CMD-check](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml)
@@ -10,6 +10,10 @@ The `cpgfR` package provides a consolidated database of the Federal Government P
 The Federal Government Payment Card (CPGF) is a payment instrument used by the government that operates similarly to a regular credit card, but within specific limits and regulations. The government uses the CPGF to cover its own expenses, provided they qualify as advances of funds (suprimento de fundos).
 
 ## 📥 Installation
+
+``` r
+ install.packages("cpgfR")
+```
 
 `cpgfR` is also available on [GitHub](https://github.com/). You can install pre-release versions via:
 
