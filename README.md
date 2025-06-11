@@ -1,4 +1,4 @@
-# 📦 cpgf
+# 📦 cpgfR
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/cpgfR)](https://cran.r-project.org/package=cpgfR)
 [![R-CMD-check](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/datafobia/cpgf/actions/workflows/R-CMD-check.yaml)
