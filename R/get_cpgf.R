@@ -14,7 +14,10 @@
 #'
 #' @export
 #'
-#' @examples \dontrun{cartao <- get_cpgf(2023, 12)}
+#' @examples \dontrun{
+#' # Download data on the Federal Government Payment Card (CPGF)
+#' cartao <- get_cpgf(2023, 12)
+#' }
 #'
 #' @return \code{(get_cpgf)} returns a \code{data.frame}
 
