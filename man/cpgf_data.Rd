@@ -45,8 +45,10 @@ limits and regulations. The government uses the CPGF to cover its own expenses,
 provided they qualify as advances of funds (suprimento de fundos).
 }
 \examples{
-\dontrun{
+\donttest{
 # Download data on the Federal Government Payment Card (CPGF)
-cpgf <- cpgf_data()
+ if(curl::has_internet()) {
+   cpgf <- cpgf_data()
+  }
 }
 }

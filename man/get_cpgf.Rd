@@ -26,9 +26,11 @@ For more information, see the deflateBR package.}
 Download the database the Federal Government Payment Card CPGF - Brazil
 }
 \examples{
-\dontrun{
+\donttest{
 # Download data on the Federal Government Payment Card (CPGF)
-cartao <- get_cpgf(2023, 12)
+if(curl::has_internet()) {
+  cartao <- get_cpgf(2023, 12)
+  }
 }
 
 }
