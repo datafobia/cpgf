@@ -47,8 +47,8 @@ provided they qualify as advances of funds (suprimento de fundos).
 \examples{
 \donttest{
 # Download data on the Federal Government Payment Card (CPGF)
- if(curl::has_internet()) {
+if(interactive() && curl::has_internet()) {
    cpgf <- cpgf_data()
-  }
+ }
 }
 }

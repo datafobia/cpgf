@@ -28,7 +28,7 @@ Download the database the Federal Government Payment Card CPGF - Brazil
 \examples{
 \donttest{
 # Download data on the Federal Government Payment Card (CPGF)
-if(curl::has_internet()) {
+if(interactive() && curl::has_internet()) {
   cartao <- get_cpgf(2023, 12)
   }
 }

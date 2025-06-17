@@ -16,7 +16,7 @@
 #'
 #' @examples \donttest{
 #' # Download data on the Federal Government Payment Card (CPGF)
-#' if(curl::has_internet()) {
+#' if(interactive() && curl::has_internet()) {
 #'   cartao <- get_cpgf(2023, 12)
 #'   }
 #' }
@@ -24,6 +24,10 @@
 #' @return \code{(get_cpgf)} returns a \code{data.frame}
 
 get_cpgf <- function(year, month, deflate = NULL, index_deflate = "ipca"){
+
+  if(!curl::has_internet()) {
+    stop("Internet connection required to download the dataset.")
+  }
 
   # padonizando o mes com dois numeros
   month <- stringr::str_pad(month, 2, "left", "0")

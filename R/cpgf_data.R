@@ -41,22 +41,30 @@
 #'
 #' @examples \donttest{
 #' # Download data on the Federal Government Payment Card (CPGF)
-#'  if(curl::has_internet()) {
+#' if(interactive() && curl::has_internet()) {
 #'    cpgf <- cpgf_data()
-#'   }
+#'  }
 #' }
 
 cpgf_data <- function(){
 
-   arquivo <-  osfr::osf_retrieve_file("3huk2")
+   if(!curl::has_internet()) {
+      stop("Internet connection required to download the dataset.")
+   }
+
    message("Processing the data...")
+   arquivo <-  osfr::osf_retrieve_file("3huk2")
 
-    down <- osfr::osf_download(arquivo, conflicts = TRUE)
+   temp_dir <- tempfile()
+   dir.create(temp_dir)
 
-    temp_env <- new.env()
-    load(down$local_path, envir = temp_env)
+   down <- osfr::osf_download(arquivo, path = temp_dir, conflicts = TRUE)
 
-    unlink(down$local_path,  recursive = TRUE)
+
+   temp_env <- new.env()
+   load(down$local_path, envir = temp_env)
+
+   unlink(temp_dir, recursive = TRUE)
 
    message("Done.\n")
    return(temp_env$final)

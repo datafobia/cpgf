@@ -20,5 +20,6 @@ Imports:
     stringr,
     osfr,
     lubridate,
-    deflateBR
+    deflateBR,
+    curl
 LazyData: true
