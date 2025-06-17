@@ -14,9 +14,11 @@
 #'
 #' @export
 #'
-#' @examples \dontrun{
+#' @examples \donttest{
 #' # Download data on the Federal Government Payment Card (CPGF)
-#' cartao <- get_cpgf(2023, 12)
+#' if(curl::has_internet()) {
+#'   cartao <- get_cpgf(2023, 12)
+#'   }
 #' }
 #'
 #' @return \code{(get_cpgf)} returns a \code{data.frame}
@@ -45,7 +47,7 @@ get_cpgf <- function(year, month, deflate = NULL, index_deflate = "ipca"){
                                 NA,
                                  dados$data_transacao)
 
-  mindate <- min(as.Date(dados$data_transacao, format = "%d/%m/%Y"), na.rm = T)
+  mindate <- min(as.Date(dados$data_transacao, format = "%d/%m/%Y"), na.rm = TRUE)
 
   dados$data_transacao <- ifelse(is.na(dados$data_transacao),
                                  paste0(lubridate::day(mindate), "/",

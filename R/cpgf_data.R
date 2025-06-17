@@ -39,10 +39,11 @@
 #'
 #' @export
 #'
-#' @examples
-#' \dontrun{
+#' @examples \donttest{
 #' # Download data on the Federal Government Payment Card (CPGF)
-#' cpgf <- cpgf_data()
+#'  if(curl::has_internet()) {
+#'    cpgf <- cpgf_data()
+#'   }
 #' }
 
 cpgf_data <- function(){
@@ -50,12 +51,12 @@ cpgf_data <- function(){
    arquivo <-  osfr::osf_retrieve_file("3huk2")
    message("Processing the data...")
 
-    down <- osfr::osf_download(arquivo, conflicts = T)
+    down <- osfr::osf_download(arquivo, conflicts = TRUE)
 
     temp_env <- new.env()
     load(down$local_path, envir = temp_env)
 
-    unlink(down$local_path,  recursive = T)
+    unlink(down$local_path,  recursive = TRUE)
 
    message("Done.\n")
    return(temp_env$final)
