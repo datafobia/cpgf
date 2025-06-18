@@ -11,6 +11,9 @@ The Federal Government Payment Card (CPGF) is a payment instrument used by the g
 
 ## 📥 Installation
 
+``` {.r}
+instal.packages("cpgfR")
+```
 `cpgfR` is also available on [GitHub](https://github.com/). You can install pre-release versions via:
 
 ``` {.r}
